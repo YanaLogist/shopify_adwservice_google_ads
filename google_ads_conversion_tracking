@@ -1,0 +1,12 @@
+/* вставьте ниже приведенный код сразу в  additional scripts
+{% if first_time_accessed %}
+    <!-- Event snippet for Test conversion page Adwservice-->
+    <script>
+      gtag('event', 'conversion', {
+        'send_to': 'AW-XXXXXXXXX/Gg-kCNj38pcXxxXXxxxxx', /добавьте свой код и ярлык конверсии
+        'value': {{ checkout.total_price | divided_by: 100.0 }},
+        'currency': '{{ currency }}',
+        'transaction_id': '{{ order_number }}',
+      });
+    </script>
+  {% endif %}
